@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day Bindiya!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* --- General Mobile Styles --- */
+        body {
+            background-color: #ffe6eb;
+            background-image: radial-gradient(#ffcdd2 15%, transparent 16%), radial-gradient(#ffcdd2 15%, transparent 16%);
+            background-size: 20px 20px;
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+            color: #880e4f;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 600px; /* Mobile width */
+            margin: auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 25px;
+            border: 4px solid #f48fb1;
+            box-shadow: 0 10px 25px rgba(216, 27, 96, 0.2);
+            position: relative;
+        }
+
+        /* --- Header --- */
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.2rem;
+            color: #d81b60;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 0px #f8bbd0;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            color: #ad1457;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* --- Floating Cute Icons (Decorations) --- */
+        .decoration {
+            position: absolute;
+            font-size: 2rem;
+        }
+        .top-left { top: 10px; left: 10px; transform: rotate(-20deg); }
+        .top-right { top: 10px; right: 10px; transform: rotate(20deg); }
+
+        /* --- Anime Photo & Video Section --- */
+        .media-frame {
+            border: 3px dashed #ff4081;
+            padding: 10px;
+            border-radius: 20px;
+            background: #fff0f5;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        /* Hearts Border Effect */
+        .media-frame::before {
+            content: '❤️❤️❤️❤️❤️❤️❤️❤️';
+            display: block;
+            font-size: 10px;
+            letter-spacing: 5px;
+            margin-bottom: 5px;
+            color: #ff4081;
+        }
+        .media-frame::after {
+            content: '❤️❤️❤️❤️❤️❤️❤️❤️';
+            display: block;
+            font-size: 10px;
+            letter-spacing: 5px;
+            margin-top: 5px;
+            color: #ff4081;
+        }
+
+        img.anime-pic {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            /* Placeholder styling if image missing */
+            min-height: 200px;
+            object-fit: cover;
+            background-color: #ffdce5;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 15px;
+            border: 2px solid #f48fb1;
+        }
+
+        /* --- Card Layout (Grid) --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.1);
+            border: 2px solid #f8bbd0;
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: scale(1.02); }
+
+        .card-title {
+            font-family: 'Fredoka One', cursive;
+            color: #d81b60;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        /* --- The Game Section --- */
+        #game-area {
+            background-color: #ffebee;
+            border-radius: 20px;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #ff80ab;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #target-heart {
+            font-size: 40px;
+            position: absolute;
+            transition: all 0.1s ease; /* Snappy movement */
+            user-select: none;
+            filter: drop-shadow(0 0 5px rgba(255,0,0,0.5));
+        }
+
+        .play-btn {
+            background: linear-gradient(45deg, #ff4081, #d81b60);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            font-family: 'Fredoka One', cursive;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.4);
+            margin-top: 10px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- Footer --- */
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #880e4f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="decoration top-left">🎁</div>
+    <div class="decoration top-right">🧸</div>
+
+    <h1>Happy Valentine's Day, Jyoti! ❤️</h1>
+    <div class="subtitle">Ek chota sa surprise tumhare liye (aka Bindiya)...</div>
+
+    <div class="media-frame">
+        <h3 class="card-title">✨ Our Cartoon Version ✨</h3>
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=ffdfbf" alt="Cute Anime Couple" class="anime-pic">
+        <p style="font-size: 0.8em; color: #ad1457; margin-top:5px;">(You are the cutest cartoon character in my life!)</p>
+    </div>
+
+    <div class="media-frame" style="background: #fff;">
+        <h3 class="card-title">🎥 Our Special Video</h3>
+        <video controls>
+            <source src="our_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="grid-container">
+        
+        <div class="card">
+            <span class="card-title">🌹 Pyar Wali Sayari</span>
+            "Na Chand chahiye, na falak chahiye,<br>
+             Mujhe bas teri ek jalak chahiye.<br>
+             Log kehte hain pyar andha hota hai,<br>
+             Par teri smile dekh kar meri aankhein khul gayi!"
+        </div>
+
+        <div class="card">
+            <span class="card-title">😂 Thoda Hasne Ke Liye</span>
+            <strong>Me:</strong> Valentine's Day par tumhe kya gift du?<br>
+            <strong>Jyoti:</strong> Mujhe Gold ki Ring dila do! 💍<br>
+            <strong>Me:</strong> Ring? Theek hai...<br>
+            *Calls her phone*<br>
+            <strong>Me:</strong> Ye lo... 'Tring Tring'! 😂🏃‍♂️"
+        </div>
+
+        <div class="card">
+            <span class="card-title">💖 Dil Ki Baat</span>
+            "Engineering ho ya Carpentry, sab fail hai,<br>
+             Jab tu samne aati hai, dil ka system hill jata hai.<br>
+             Computer hang ho ya na ho,<br>
+             Tere pyar mein main zaroor hang ho gaya hoon!"
+        </div>
+    </div>
+
+    <div class="card" style="background: #fff5f8;">
+        <span class="card-title">🎮 Catch My Heart!</span>
+        <p>Score: <span id="score" style="font-weight:bold; color:#d81b60; font-size:1.2rem;">0</span></p>
+        
+        <div id="game-area" onclick="missedClick(event)">
+            <div id="target-heart" onclick="catchHeart(event)">💖</div>
+        </div>
+        
+        <p style="font-size: 0.8rem; margin-top:5px;">Tap the heart quickly before it moves!</p>
+    </div>
+
+    <div class="footer">
+        Made with ❤️ by Nitish<br>
+        I Love You Forever!
+    </div>
+</div>
+
+<script>
+    /* --- Game Logic --- */
+    const heart = document.getElementById('target-heart');
+    const gameArea = document.getElementById('game-area');
+    const scoreText = document.getElementById('score');
+    let score = 0;
+    let gameInterval;
+
+    // Function to move heart to random position
+    function moveHeart() {
+        const maxX = gameArea.clientWidth - 50;
+        const maxY = gameArea.clientHeight - 50;
+        
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        heart.style.left = randomX + 'px';
+        heart.style.top = randomY + 'px';
+    }
+
+    // Function when heart is clicked
+    function catchHeart(event) {
+        event.stopPropagation(); // Stop click from hitting the background
+        score++;
+        scoreText.innerText = score;
+        
+        // Make it faster every 5 points
+        if (score === 5) alert("Wow! You caught my heart 5 times! ❤️");
+        if (score === 10) alert("Okay, you are a pro at stealing hearts! 😍");
+        
+        moveHeart();
+        // Reset timer to make it jump immediately
+        clearInterval(gameInterval);
+        gameInterval = setInterval(moveHeart, 1000); 
+    }
+
+    // Function if she misses the heart
+    function missedClick(event) {
+        // Optional: reduce score or just do nothing
+        // score--; 
+        // scoreText.innerText = score;
+    }
+
+    // Start the heart moving automatically
+    gameInterval = setInterval(moveHeart, 900);
+    moveHeart(); // Initial move
+</script>
+
+</body>
+</html>
